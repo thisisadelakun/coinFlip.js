@@ -102,7 +102,7 @@ body {
 #flip-button{
     color: #ffffff;
     display: block;
-    padding: 12px 36px;
+    padding: 12px 30px;
     border-radius: 12px 10px;
     font-size: 0.8rem;
     background: rgb(92, 0, 240);
@@ -112,7 +112,7 @@ body {
 #reset-coin-button{
     color: #ffffff;
     display: block;
-    padding: 12px 42px;
+    padding: 13px 42px;
     border-radius: 12px 10px;
     font-size: 0.8rem;
     background: hsl(345deg 100% 47%);
