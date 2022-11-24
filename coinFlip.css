@@ -1,0 +1,153 @@
+@import 'animate.css';
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100%;
+    background:linear-gradient(90deg,rgb(86, 87, 50), rgb(68, 68, 92)) fixed;
+    font-family:'Press Start 2P', cursive;
+}
+
+.coin-container {
+    background-color: #ffffff;
+    width: 400px;
+    padding: 50px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    box-shadow: 15px 30px 35px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    perspective: 300px;
+}
+
+#flip-counts {
+    text-align: left;
+    color: #101020;
+    font-weight: 500;
+    line-height: 25px;
+    font-size: 12px;
+}
+.heads-count{
+    text-align: left;
+}
+.tails-count{
+    text-align: left;
+    /* text-indent: 1px; */
+}
+
+#main-coin {
+    position: relative;
+    margin: 50px auto;
+    height: 150px;
+    width: 150px;
+    -webkit-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+}
+
+#main-coin img {
+    width: 145px;
+}
+.coin-head{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+}
+.coin-tail{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+
+}
+.coin-tail{
+    transform: rotateX(180deg);
+}
+@keyframes spin-tails{
+    0%{
+        transform: rotateX(0);
+    }
+    100%{
+        transform: rotateX(1980deg);
+    }
+}
+@keyframes spin-heads{
+    0%{
+        transform: rotateX(0);
+    }
+    100%{
+        transform: rotateX(2160deg);
+    }
+}
+.flip-coin-buttons{
+    display: flex;
+    justify-content: space-between;
+}
+.flip-coin-buttons button{
+    width: 120px;
+    padding: 10px 0;
+    /* border-radius: 10px 0px; */
+    cursor: pointer;
+    border: none;
+}
+
+#flip-button{
+    color: #ffffff;
+    display: block;
+    padding: 12px 36px;
+    border-radius: 12px 10px;
+    font-size: 0.8rem;
+    background: rgb(92, 0, 240);
+    transform: translateY(-6px);
+    outline: none
+}
+#reset-coin-button{
+    color: #ffffff;
+    display: block;
+    padding: 12px 42px;
+    border-radius: 12px 10px;
+    font-size: 0.8rem;
+    background: hsl(345deg 100% 47%);
+    transform: translateY(-7px);
+    outline: none
+}
+#flip-button:disabled{
+    background-color: #e1e0ee;
+    border-color: #e1e0ee;
+    color: #0c0cf7;
+}
+
+.reset-coin-buttons {
+    background: hsl(340deg 100% 32%);
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+
+.flip-buttons:active #flip-button,
+.reset-coin-buttons:active #reset-coin-button{
+    transform: translateY(-2px);
+
+} 
+.flip-buttons{
+    background: rgb(35, 1, 128);
+    border-radius: 12px;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+    outline-offset: 4px;
+}
+.coin-trial-score{
+    margin-top: 20px;
+    text-align: right;
+}
