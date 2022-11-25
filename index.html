@@ -12,32 +12,39 @@
 
 <body>
     <div class="coin-container ">
-       <div class="">
-        <div class="flip-counts" id="flip-counts">
-            <p class="heads-count" id="heads-count">Heads: 0</p>
-            <p class="tails-count" id="tails-count">Tails: 0</p>
+        <div class="">
+
+            <div class="main-coin " id="main-coin">
+                <div class="coin-head" id="coin-head">
+                    <img src="/ASSETS/downloadhead11111.jpeg">
+                </div>
+                <div class="coin-tail" id="coin-tail">
+                    <img src="/ASSETS/imagetails222.jpeg">
+                </div>
+            </div>
+            <div class="flip-counts animate__animated animate__flash " id="flip-counts">
+                <p class="heads-count" id="heads-count">Heads: 0</p>
+                <p class="tails-count" id="tails-count">Tails: 0</p>
+            </div>
+            <div class="flip-coin-buttons" id="flip-coin-buttons">
+                <div class="flip-buttons">
+                    <button class="flip-button" id="flip-button">
+                        Flip Coin
+                    </button>
+                </div>
+                <div class="reset-coin-buttons">
+                    <button class="reset-coin-button" id="reset-coin-button">
+                        Reset
+                    </button>
+                    
+                </div>
+            </div>
         </div>
-        <div class="main-coin " id="main-coin">
-            <div class="coin-head" id="coin-head">
-                <img src="/ASSETS/downloadhead11111.jpeg">
-            </div>
-            <div class="coin-tail" id="coin-tail">
-                <img src="/ASSETS/imagetails222.jpeg">
-            </div>
-        </div>
-        <div class="flip-coin-buttons" id="flip-coin-buttons">
-            <div class="flip-buttons">
-                <button class="flip-button" id="flip-button">
-                    Flip Coin
-                </button>
-            </div>
-            <div class="reset-coin-buttons">
-                <button class="reset-coin-button" id="reset-coin-button">
-                    Reset
-                </button>
-            </div>
-        </div>
-       </div>
+        <audio>
+            <source src="./ASSETS/mp3/mixkit-fairy-arcade-sparkle-866.wav" type="audio/wav">
+            <source class="themesound" src="./ASSETS/mp3/Volume Alpha 08. Minecraft.mp3" type="audio/mp3">
+        </audio>
+        
     </div>
 
     <!--Script-->

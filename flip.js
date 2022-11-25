@@ -3,11 +3,14 @@ let tails =  0;
 let coin = document.querySelector(".main-coin")
 let flipButton = document.querySelector('.flip-button')
 let resetButton = document.querySelector('.reset-coin-button')
+let counts = document.querySelector('.flip-counts')
 
 flipButton.addEventListener('click', () =>{
     let i = Math.floor(Math.random() * 2);
     console.log(i);
     coin.style.animation = "none";
+    counts.style.animation ="animate__animated animate__flash"
+    console.log(counts);
     if(i){
         setTimeout(function(){
             coin.style.animation = "spin-heads 3s forwards";
@@ -18,6 +21,7 @@ flipButton.addEventListener('click', () =>{
     else{
         setTimeout(function(){
             coin.style.animation = "spin-tails 3s forwards";
+            
         }, 100);  
         tails++;
     }
@@ -28,6 +32,7 @@ flipButton.addEventListener('click', () =>{
 function updateCounts(){
     document.querySelector(".heads-count").textContent = `Heads: ${heads}`
     document.querySelector(".tails-count").textContent = `Tails: ${tails}`
+
 }
 
 function disableButton(){
@@ -38,9 +43,10 @@ function disableButton(){
     },3000);
 
     resetButton.addEventListener("click",() => {
-        coin.style.animation = "none";
+        coin.style.animation = "none"; 
         heads = 0;
         tails = 0;
         updateCounts();
     });
+
 }
