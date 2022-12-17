@@ -25,7 +25,7 @@ flipButton.addEventListener('click', () =>{
         }, 100);  
         tails++;
     }
-    setTimeout(updateCounts, 3000);
+    setTimeout(updateCounts, 2999);
     disableButton();
 });
 
@@ -40,7 +40,7 @@ function disableButton(){
     setTimeout(function(){
         flipButton.disable = false;
 
-    },3000);
+    },2999);
 
     resetButton.addEventListener("click",() => {
         coin.style.animation = "none"; 
